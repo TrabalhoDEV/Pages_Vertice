@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Cadastro | Aluno</title>
+<link rel="stylesheet" href="/Pag/CSS/signUp.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Cadastro de Aluno</h2>
+  <p>Registre-se para acessar o sistema!</p>
+
+  <form action="/Pag/HTML/home.html" method="post">
+
+    <!-- Nome -->
+    <div class="input-group">
+      <label for="nome">Nome Completo</label>
+      <input 
+        type="text" 
+        id="nome" 
+        name="nome" 
+        required
+        placeholder="Digite seu nome completo">
+    </div>
+
+    <!-- Matrícula -->
+    <div class="input-group">
+      <label for="matricula">Matrícula (única)</label>
+      <input 
+        type="text" 
+        id="matricula" 
+        name="matricula" 
+        required
+        pattern="[0-9]{6}"
+        title="A matrícula deve conter exatamente 6 números"
+        placeholder="Ex: 123456">
+    </div>
+
+    <!-- Email -->
+    <div class="input-group">
+      <label for="email">E-mail</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        required
+        placeholder="exemplo@email.com">
+    </div>
+
+    <!-- Senha -->
+    <div class="input-group">
+      <label for="senha">Senha</label>
+      <input 
+        type="password"
+        name="senha"
+        required
+        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,28}$"
+        title="A senha deve ter entre 8 e 20 caracteres, incluindo pelo menos 1 letra maiúscula, 1 minúscula e 1 número."
+        placeholder="Digite sua senha">
+    </div>
+
+    <button type="submit">Cadastrar</button>
+
+  </form>
+  <p>Já tem conta? <a href="loginPA.html">Login</a></p>
+</div>
+
+</body>
+</html>

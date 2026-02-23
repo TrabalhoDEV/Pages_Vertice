@@ -1,0 +1,59 @@
+@import url('/Teacher/layout/topbar.css');
+@import url('/Teacher/layout/tokens.css');
+@import url('/Teacher/layout/navbar.css');
+
+/* Cadastro */
+
+body{
+    background-color:#F5F5FD;
+}
+
+.form-container{
+    background-color: var(--surface-color);
+    border-radius: var(--large-radius);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 34px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 150px;
+    height: 550px; 
+    
+}
+.form-container h2{
+    margin-bottom: 0;
+    text-align: center;
+}
+.form-container p{ 
+    margin-bottom: 30px;
+    font-size: var(--text-sm);
+    color: var(--muted-text-color);
+    text-align: center;
+}
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:18px;
+}
+
+input{
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #dfe3ea;
+    font-size:14px;
+}
+button {
+    margin-top: 15px;
+  background: #4c63ff;
+  color: white;
+  border: none;
+  padding: 10px ;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+}

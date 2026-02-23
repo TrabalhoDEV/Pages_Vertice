@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Login | Aluno/Professor</title>
+<link rel="stylesheet" href="loginPA.css">
+
+</head>
+<body>
+
+<div class="form-container">
+  <h2><a class="linkAdm" href="loginAdm.html">Login</a> Aluno/Professor</h2>
+  <p>Bem-vindo de volta! Faça seu login.</p>
+
+  <form action="/Pag/HTML/home.html" method="post">
+
+    <!-- Matrícula -->
+    <div class="input-group">
+    <label for="login">Usuário ou Matrícula</label>
+    <input 
+      type="text"
+      id="login"
+      name="login"
+      required
+      placeholder="Digite seu usuário ou matrícula">
+  </div>
+
+    <!-- Senha -->
+    <div class="input-group">
+      <label for="senha">Senha</label>
+      <input 
+        type="password" 
+        id="senha" 
+        name="senha" 
+        required
+        placeholder="Digite a Senha">
+    </div>
+
+    <button type="submit">Logar-se</button>
+
+  </form>
+  
+  <p>Ainda não tem conta? <a href="signUp.html">Cadastro</a></p>
+
+</div>
+
+</body>
+</html>

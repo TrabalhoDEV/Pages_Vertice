@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Login | Aluno/Professor</title>
+<link rel="stylesheet" href="loginAdm.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Acesso Administrativo</h2>
+  <p>Configure, monitore e administre o sistema.</p>
+
+  <form action="/Pag/HTML/home.html" method="post">
+
+    <!-- Matrícula -->
+    <div class="input-group">
+    <label for="cpf">CPF</label>
+   <input 
+        type="text"
+        name="cpf"
+        required
+        pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+        title="Por favor digite no formato: 000.000.000-00"
+        placeholder="000.000.000-00">
+  </div>
+
+    <!-- Senha -->
+    <div class="input-group">
+      <label for="senha">Senha</label>
+      <input 
+        type="password" 
+        id="senha" 
+        name="senha" 
+        required
+        placeholder="Digite a Senha">
+    </div>
+
+    <button type="submit">Logar-se</button>
+
+  </form>
+  
+  <p>Voltar para <a href="loginPA.html">Login</a></p>
+
+</div>
+
+</body>
+</html>
