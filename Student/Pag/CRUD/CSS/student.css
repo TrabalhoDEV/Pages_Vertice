@@ -1,7 +1,6 @@
 @import url('/Teacher/layout/topbar.css');
 @import url('/Teacher/layout/tokens.css');
 @import url('/Teacher/layout/navbar.css');
- 
 
 .boletim-grid{  
     background-color: var(--surface-color); 
@@ -43,8 +42,7 @@ td button{
 }
 .btn-action {
   display: flex;        
-  gap: 10px; 
-  margin-left: 30px;           
+  gap: 10px;            
 }
 
 .grade-table{
@@ -52,7 +50,6 @@ td button{
     font-size: 16px;
 
 }
-
 
 .grade-table th{
     text-align: left;
@@ -93,46 +90,43 @@ td button{
     border:1px solid #cfd6e6;
 }
 
-/* ===== DIALOG BASE ===== */
 dialog {
     border: none;
-    padding: 0;
+    border-radius: 12px;
+    padding: 0px;
     border-radius: var(--medium-radius);
     border: 1px solid var(--border-color);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-/* Fundo escuro atrás do modal */
-dialog::backdrop {
-    background: rgba(0, 0, 0, 0.4);
-}
-
-/* ===== CARDS ===== */
-.modal-cardU,
-.modal-cardAdd {
-    padding: 30px;
-    height: 480px;
-    width: 350px;
+.modal-cardU {
+  padding: 30px;
+  height: 480px;
+  width: 350px;
 }
 
 .modal-cardD {
-    padding: 30px;
-    height: 170px;
-    width: 350px;
+  padding: 30px;
+  height: 170px;
+  width: 350px;
 }
 
-/* ===== INPUTS E SELECT ===== */
-input{
-    display: block;
+.modal-cardAdd {
+  padding: 30px;
+  height: 480px;
+  width: 350px;
+}
+
+.modal-cardAdd input {
     width: 90%;
     padding: 8px;
     margin-bottom: 15px;
     border-radius: var(--medium-radius);
     border: 1px solid rgb(201, 201, 201);
 }
-input, select{
-    display: block;
+
+input, select {
+  display: block;
 }
 select{
     margin-bottom: 15px;
@@ -141,22 +135,31 @@ select{
 
 }
 
-/* ===== LABEL ===== */
-label {
-    font-size: var(--text-sm);
-    margin-bottom: 5px;
+.modal-cardU input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: var(--medium-radius);
+    border: 1px solid rgb(201, 201, 201);
+}
+.modal-cardD input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: var(--medium-radius);
+    border: 1px solid rgb(201, 201, 201);
 }
 
-/* ===== BOTÕES ===== */
 .modal-actions {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 30px;
+    margin-bottom: 0px;
+    
 }
-
-.modal-actions button {
-    font-size: var(--text-sm);
+.modal-actions button{
+    font-size: var(--text-sm) ;
     background: #4c63ff;
     color: white;
     border: none;
@@ -164,35 +167,6 @@ label {
     height: 40px;
     border-radius: 8px;
     cursor: pointer;
-    transition: 0.2s;
-    margin-bottom: 20px;
+
 }
 
-.modal-actions button:hover {
-    background: #3a4edc;
-}
-
-.checkbox-container {
-  width: 90%;
-  max-height: 150px;
-  overflow-y: auto;
-  border: 1px solid rgb(201, 201, 201);
-  border-radius: var(--medium-radius);
-  padding: 10px 2px;
-  margin-bottom: 15px;
-  background: white;
-}
-
-.checkbox-container label {
-    display: flex;
-  gap: 8px;
-  margin-bottom: 8px;
-  font-size: 14px;
-  cursor: pointer;
-  text-align: left;
-}
-
-.checkbox-container input[type="checkbox"] {
-  width: auto;
-  flex-shrink: 0;
-}

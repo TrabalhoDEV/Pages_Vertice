@@ -166,7 +166,9 @@
                   <th>Usuário</th>
                   <th>Email</th>
                   <th>Disciplina</th>
+                  <th>Turma</th>
                   <th>Senha</th>
+                  
                 </tr>
               </thead>
 
@@ -223,110 +225,278 @@
     <!-- MODAL DELETE -->
     <!-- MODAL EDITAR -->
     <dialog id="editDialog">
-      <div class="modal-cardU">
-        <h1>Editar Professor</h1>
+      <div class="modal-cardAdd">
+        <h3>Editar Professor</h3>
 
         <form id="editForm">
-          <input type="hidden" id="editId">
 
           <label>Nome</label>
-          <input type="text" id="editName">
+          <input type="text" id="editNome" required>
 
           <label>Usuário</label>
-          <input type="text" id="editUser">
+          <input type="text" id="editUser" required>
 
           <label>Email</label>
-          <input type="email" id="editEmail">
+          <input type="email" id="editEmail" required>
 
-          <label>Disciplina</label>
-          <input type="text" id="editSubject">
-          
+          <label>Diciplinas</label>
+          <div class="checkbox-container">
+            <label><input type="checkbox" name="subjects" value="Matemática"> Matemática</label>
+            <label><input type="checkbox" name="subjects" value="Português"> Português</label>
+            <label><input type="checkbox" name="subjects" value="História"> História</label>
+            <label><input type="checkbox" name="subjects" value="Geografia"> Geografia</label>
+            <label><input type="checkbox" name="subjects" value="Biologia"> Biologia</label>
+            <label><input type="checkbox" name="subjects" value="Física"> Física</label>
+            <label><input type="checkbox" name="subjects" value="Química"> Química</label>
+            <label><input type="checkbox" name="subjects" value="Inglês"> Inglês</label>
+            <label><input type="checkbox" name="subjects" value="Espanhol"> Espanhol</label>
+            <label><input type="checkbox" name="subjects" value="Artes"> Artes</label>
+            <label><input type="checkbox" name="subjects" value="Educação Física"> Educação Física</label>
+            <label><input type="checkbox" name="subjects" value="Filosofia"> Filosofia</label>
+            <label><input type="checkbox" name="subjects" value="Sociologia"> Sociologia</label>
+            <label><input type="checkbox" name="subjects" value="Programação"> Programação</label>
+            <label><input type="checkbox" name="subjects" value="Banco De Dados"> Banco De Dados</label>
+          </div>
+
+          <label>Turma</label>
+          <div class="checkbox-container">
+            <label><input type="checkbox" name="turma" value="1"> 1°</label>
+            <label><input type="checkbox" name="turma" value="2"> 2°</label>
+            <label><input type="checkbox" name="turma" value="3"> 3°</label>
+            <label><input type="checkbox" name="turma" value="4"> 4°</label>
+            <label><input type="checkbox" name="turma" value="5"> 5°</label>
+            <label><input type="checkbox" name="turma" value="6"> 6°</label>
+            <label><input type="checkbox" name="turma" value="7"> 7°</label>
+            <label><input type="checkbox" name="turma" value="8"> 8°</label>
+            <label><input type="checkbox" name="turma" value="9"> 9°</label>
+          </div>
+
           <label>Senha</label>
-          <input type="text" id="editPassword">
+          <input type="text" id="editPassword" required>
 
           <div class="modal-actions">
             <button type="button" id="closeEdit">Cancelar</button>
-            <button type="submit" id="saveEdit">Salvar</button>
+            <button type="submit">Salvar</button>
           </div>
+
         </form>
       </div>
     </dialog>
 
+    <dialog id="addDialog">
+      <div class="modal-cardAdd">
+        <h3>Adicionar Aluno</h3>
 
-    <!-- MODAL DELETE -->
+        <form id="addForm">
+
+          <label>Nome</label>
+          <input type="text" id="addNome" required>
+
+          <label>Usuário</label>
+          <input type="text" id="addUsuario" required>
+
+          <label>Email</label>
+          <input type="email" id="addEmail" required>
+
+
+          <label>Diciplinas</label>
+          <div class="checkbox-container">
+            <label><input type="checkbox" name="subjects" value="Matemática"> Matemática</label>
+            <label><input type="checkbox" name="subjects" value="Português"> Português</label>
+            <label><input type="checkbox" name="subjects" value="História"> História</label>
+            <label><input type="checkbox" name="subjects" value="Geografia"> Geografia</label>
+            <label><input type="checkbox" name="subjects" value="Biologia"> Biologia</label>
+            <label><input type="checkbox" name="subjects" value="Física"> Física</label>
+            <label><input type="checkbox" name="subjects" value="Química"> Química</label>
+            <label><input type="checkbox" name="subjects" value="Inglês"> Inglês</label>
+            <label><input type="checkbox" name="subjects" value="Espanhol"> Espanhol</label>
+            <label><input type="checkbox" name="subjects" value="Artes"> Artes</label>
+            <label><input type="checkbox" name="subjects" value="Educação Física"> Educação Física</label>
+            <label><input type="checkbox" name="subjects" value="Filosofia"> Filosofia</label>
+            <label><input type="checkbox" name="subjects" value="Sociologia"> Sociologia</label>
+            <label><input type="checkbox" name="subjects" value="Programação"> Programação</label>
+            <label><input type="checkbox" name="subjects" value="Banco De Dados"> Banco De Dados</label>
+          </div>
+
+          <label>Turma</label>
+          <div class="checkbox-container">
+            <label><input type="checkbox" name="turma" value="1"> 1°</label>
+            <label><input type="checkbox" name="turma" value="2"> 2°</label>
+            <label><input type="checkbox" name="turma" value="3"> 3°</label>
+            <label><input type="checkbox" name="turma" value="4"> 4°</label>
+            <label><input type="checkbox" name="turma" value="5"> 5°</label>
+            <label><input type="checkbox" name="turma" value="6"> 6°</label>
+            <label><input type="checkbox" name="turma" value="7"> 7°</label>
+            <label><input type="checkbox" name="turma" value="8"> 8°</label>
+            <label><input type="checkbox" name="turma" value="9"> 9°</label>
+          </div>
+
+          <div class="modal-actions">
+            <button type="button" id="closeAdd">Cancelar</button>
+            <button type="submit">Adicionar</button>
+          </div>
+
+        </form>
+      </div>
+    </dialog>
+
     <dialog id="deleteDialog">
       <div class="modal-cardD">
-        <h3>Deseja deletar este professor?</h3>
-        <p id="deleteText"></p>
+        <h3>Confirmar Exclusão</h3>
+
+        <p>Tem certeza que deseja deletar este professor?</p>
 
         <div class="modal-actions">
-          <button id="closeDelete">Cancelar</button>
-          <button id="confirmDelete">Confirmar</button>
+          <button type="button" id="closeDelete">Cancelar</button>
+          <button type="button" id="confirmDelete">Deletar</button>
         </div>
       </div>
     </dialog>
+
   </main>
   
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
 
-      const editDialog = document.getElementById("editDialog");
-      const deleteDialog = document.getElementById("deleteDialog");
+  const table = document.querySelector("tbody");
 
-      const closeEdit = document.getElementById("closeEdit");
-      const closeDelete = document.getElementById("closeDelete");
+  // ===== MODAIS =====
+  const addDialog = document.getElementById("addDialog");
+  const editDialog = document.getElementById("editDialog");
+  const deleteDialog = document.getElementById("deleteDialog");
 
-      const deleteText = document.getElementById("deleteText");
+  // ===== BOTÕES =====
+  const openAdd = document.querySelector(".btn-add");
+  const closeAdd = document.getElementById("closeAdd");
+  const closeEdit = document.getElementById("closeEdit");
+  const closeDelete = document.getElementById("closeDelete");
+  const confirmDelete = document.getElementById("confirmDelete");
 
-      let currentRow = null;
+  // ===== FORMULÁRIOS =====
+  const addForm = document.getElementById("addForm");
+  const editForm = document.getElementById("editForm");
 
-      // BOTÃO EDITAR
-      document.querySelectorAll(".btn-edit").forEach(button => {
-        button.addEventListener("click", (e) => {
+  // ===== CONTROLE =====
+  let selectedRow = null;
+  let rowToDelete = null;
 
-          const row = e.target.closest("tr");
-          currentRow = row;
+  // =========================
+  // ABRIR MODAL ADD
+  // =========================
+  openAdd.addEventListener("click", () => {
+    addDialog.showModal();
+  });
 
-          document.getElementById("editId").value = row.cells[0].innerText;
-          document.getElementById("editNome").value = row.cells[1].innerText;
-          document.getElementById("editUser").value = row.cells[2].innerText;
-          document.getElementById("editEmail").value = row.cells[3].innerText;
-          document.getElementById("editSubject").value = row.cells[5].innerText;
-          document.getElementById("editPassword").value = row.cells[6].innerText;
+  closeAdd.addEventListener("click", () => {
+    addDialog.close();
+  });
 
-          editDialog.showModal();
-        });
-      });
+  closeEdit.addEventListener("click", () => {
+    editDialog.close();
+  });
 
-      // BOTÃO DELETE
-      document.querySelectorAll(".btn-delete").forEach(button => {
-        button.addEventListener("click", (e) => {
+  closeDelete.addEventListener("click", () => {
+    deleteDialog.close();
+  });
 
-          const row = e.target.closest("tr");
-          currentRow = row;
+  // =========================
+  // ADICIONAR PROFESSOR
+  // =========================
+  addForm.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-          const nome = row.cells[1].innerText;
+    const nome = addNome.value;
+    const user = addUser.value;
+    const email = addEmail.value;
+    const subject = addSubject.value;
+    const password = addPassword.value;
 
-          deleteText.innerText = "Professor: " + nome;
+    const newRow = table.insertRow();
+    const id = table.rows.length;
 
-          deleteDialog.showModal();
-        });
-      });
+    newRow.innerHTML = `
+      <td>${id}</td>
+      <td>${nome}</td>
+      <td>${user}</td>
+      <td>${email}</td>
+      <td>${subject}</td>
+      <td>${password}</td>
+      <td>
+        <div class="btn-action">
+          <button class="btn-edit">Modificar</button>
+          <button class="btn-delete">Deletar</button>
+        </div>
+      </td>
+    `;
 
-      // FECHAR
-      closeEdit.addEventListener("click", () => editDialog.close());
-      closeDelete.addEventListener("click", () => deleteDialog.close());
+    addForm.reset();
+    addDialog.close();
+  });
 
-      // CONFIRMAR DELETE
-      document.getElementById("confirmDelete").addEventListener("click", () => {
-        if (currentRow) {
-          currentRow.remove();
-        }
-        deleteDialog.close();
-      });
+  // =========================
+  // EVENT DELEGATION (EDIT + DELETE)
+  // =========================
+  table.addEventListener("click", (e) => {
 
+    // ===== DELETE =====
+    if (e.target.classList.contains("btn-delete")) {
+      rowToDelete = e.target.closest("tr");
+      deleteDialog.showModal();
+    }
+
+    // ===== EDIT =====
+    if (e.target.classList.contains("btn-edit")) {
+      selectedRow = e.target.closest("tr");
+
+      editNome.value = selectedRow.cells[1].innerText;
+      editUser.value = selectedRow.cells[2].innerText;
+      editEmail.value = selectedRow.cells[3].innerText;
+      
+      editPassword.value = selectedRow.cells[5].innerText;
+
+      editDialog.showModal();
+    }
+
+  });
+
+  // =========================
+  // SALVAR EDIÇÃO
+  // =========================
+  editForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    selectedRow.cells[1].innerText = editNome.value;
+    selectedRow.cells[2].innerText = editUser.value;
+    selectedRow.cells[3].innerText = editEmail.value;
+    selectedRow.cells[5].innerText = editPassword.value;
+
+    editDialog.close();
+  });
+
+  // =========================
+  // CONFIRMAR DELETE
+  // =========================
+  confirmDelete.addEventListener("click", () => {
+    if (rowToDelete) {
+      rowToDelete.remove();
+      updateIds();
+      rowToDelete = null;
+    }
+    deleteDialog.close();
+  });
+
+  // =========================
+  // ATUALIZAR IDS
+  // =========================
+  function updateIds() {
+    const rows = table.querySelectorAll("tr");
+    rows.forEach((row, index) => {
+      row.cells[0].innerText = index + 1;
     });
-  </script>
+  }
+
+});
+</script>
 </body>
 </html>
  
