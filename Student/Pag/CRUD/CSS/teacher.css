@@ -31,15 +31,26 @@
  
 }
 
-td button{
+.btn-delete, .btn-edit{
     font-size: var(--text-sm) ;
     background: #4c63ff;
     color: white;
-    border: none;
+    border:1px #3a4edc;
     width: 110px;
     height: 40px;
     border-radius: 8px;
     cursor: pointer;
+}
+.btn-details{
+    font-size: var(--text-sm) ;
+    background: #ffffff;
+    color:#4c63ff;
+    border:1px solid#4c63ff;
+    width: 110px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 20px;
 }
 .btn-action {
   display: flex;        
@@ -93,6 +104,8 @@ td button{
     border:1px solid #cfd6e6;
 }
 
+
+
 /* ===== DIALOG BASE ===== */
 dialog {
     border: none;
@@ -100,7 +113,7 @@ dialog {
     border-radius: var(--medium-radius);
     border: 1px solid var(--border-color);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 /* Fundo escuro atrás do modal */
@@ -120,6 +133,11 @@ dialog::backdrop {
     padding: 30px;
     height: 170px;
     width: 350px;
+}
+#detailsDialog{
+    padding: 30px;
+    height: 590px;
+    width: 490px;
 }
 
 /* ===== INPUTS E SELECT ===== */
@@ -195,4 +213,75 @@ label {
 .checkbox-container input[type="checkbox"] {
   width: auto;
   flex-shrink: 0;
+}
+
+.dialog-header{
+    display: flex;
+    gap: 185px;
+    color: #3a4edc;
+}
+.close-btn{
+    font-size:x-large;
+    background-color:#ffffff;
+    color: #282828;
+    border:none;
+    cursor: pointer;
+}
+
+.label,.value{
+    color: #181d42;
+    
+}
+
+
+.info-section {
+  margin-top: 30px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 14px 0;
+  
+}
+
+.label {
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.value {
+    color: gray;
+    font-size: 1.15rem;
+}
+
+.lists-container {
+  display: flex;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.list-box {
+  flex: 1;
+
+}
+
+.list-box h3{
+    color: #3a4edc;
+    font-size: x-large;
+}
+
+.scroll-list {
+  max-height: 210px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.scroll-list li {
+    font-size: 1em;
+  list-style: none;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
 }
