@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CRUD | Vértice</title>
-  <link rel="stylesheet" href="/Student/Pag/CRUD/CSS/subject.css" />
+  <link rel="stylesheet" href="/Student/Pag/CRUD/CSS/admin.css" />
   <link rel="shortcut icon" href="../assets/Logo - Vértice.svg" type="image/x-icon">
 </head>
  
@@ -95,7 +95,7 @@
  
       <nav class="sidebar-nav">
         <ul>
-         <li class="sidebar-item non-active">
+          <li class="sidebar-item non-active">
             <a href="student.html">
               <span class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="none">
@@ -118,7 +118,7 @@
             </a>
           </li>
  
-          <li class="sidebar-item active">
+          <li class="sidebar-item non-active">
             <a href="subject.html">
               <span class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="23" height="26" viewBox="0 0 23 26" fill="none">
@@ -140,7 +140,7 @@
               <span>Turmas</span>
             </a>
           </li>
-          <li class="sidebar-item non-active">
+          <li class="sidebar-item active">
             <a href="adm.html">
               <span class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="23" height="26" viewBox="0 0 23 26" fill="none">
@@ -173,8 +173,8 @@
       <section>
         <div class="admin-table-grid">
           <div class="header-grid">
-              <h1>Lista de Matérias</h1> 
-              <button id="btn-add">Adicionar Matéria</button> 
+              <h1>Lista de Administradores</h1> 
+              <button id="btn-add">Adicionar Administrador</button> 
             </div>
             
             <hr>
@@ -182,8 +182,11 @@
               <thead>
                 <tr>
                   <th>ID</th>
-                  <th>Matéria</th>
-                  <th>Prazo</th>
+                  <th>Nome</th>
+                  <th>Documento</th>
+                  <th>Email</th>
+                  <th class="password">Senha</th>
+                  <th>Status</th>
                 </tr>
               </thead>
 
@@ -192,9 +195,11 @@
            
             <tr>
               <td>1</td>
-              <td class="subject math">Matemática</td>
-              <td>29/04/2026</td>
-
+              <td>João Silva</td>
+              <td>123.456.789-01</td>
+              <td>joao.silva@email.com</td>
+              <td class="password-td">579809785</td>
+              <td><span class="status approved">Ativo</span></td>
               <td>
                 <div class="btn-action">
                   <button class="btn-edit">Modificar</button>
@@ -205,9 +210,11 @@
           
             <tr>
               <td>2</td>
-              <td class="subject software-engineering">Engenharia de Software</td>
-              <td>07/06/2026</td>
-
+              <td>Maria Oliveira</td>
+              <td>234.567.890-12</td>
+              <td>maria.oliveira@provedor.com</td>
+              <td class="password-td">84689577</td>
+              <td><span class="status approved">Ativo</span></td>
               <td>
                 <div class="btn-action">
                   <button class="btn-edit">Modificar</button>
@@ -218,9 +225,11 @@
           
             <tr>
               <td>3</td>
-              <td class="subject chemistry">Química</td>
-              <td>25/03/2026</td>
-
+              <td>Carlos Eduardo</td>
+              <td>345.678.901-23</td>
+              <td>cadu.tech@empresa.com.br</td>
+              <td class="password-td">123457876</td>
+              <td><span class="status pending">Pendente</span></td>
               <td>
                 <div class="btn-action">
                   <button class="btn-edit">Modificar</button>
@@ -231,9 +240,11 @@
           
             <tr>
               <td>4</td>
-              <td class="subject math">Matemática</td>
-              <td>11/03/2026</td>
-
+              <td>Ana Beatriz Costa</td>
+              <td>456.789.012-34</td>
+              <td>ana.costa@webmail.com</td>
+              <td class="password-td">6424523</td>
+              <td><span class="status reproved">Inativo</span></td>
               <td>
                 <div class="btn-action">
                   <button class="btn-edit">Modificar</button>
@@ -244,8 +255,11 @@
           
             <tr>
               <td>5</td>
-              <td class="subject portuguese">Português</td>
-              <td>30/05/2026</td>
+              <td>Ricardo Mendes</td>
+              <td>567.890.123-45</td>
+              <td>ricardo.m@servico.com</td>
+              <td class="password-td">4642457863</td>
+              <td><span class="status approved">Ativo</span></td>
               <td>
                 <div class="btn-action">
                   <button class="btn-edit">Modificar</button>
@@ -258,39 +272,47 @@
       </table>
     </div>  
     </section>
-      <!-- EDITAR -->
-    
-    <!-- MODAL DELETE -->
+
     <!-- MODAL EDITAR -->
-    <dialog id="editDialog">
-      <div class="modal-cardU">
-        <h1>Editar Matéria</h1>
+    <dialog id="modalEdit">
+  <div class="modal-cardU">
 
-        <form id="editForm">
-          <input type="hidden" id="editId">
+    <h3>Editar Usuário</h3>
 
-          <label>Nome</label>
-          <input type="text" id="editNome">
-          
-          <label>Prazo</label>
-          <input type="date" id="editDeadline">
+    <input type="hidden" id="editId">
 
+    <label>Nome</label>
+    <input type="text" id="editNome">
 
+    <label>Documento</label>
+    <input type="text" id="editDocumento">
 
+    <label>Email</label>
+    <input type="email" id="editEmail">
 
-          <div class="modal-actions">
-            <button type="button" id="closeEdit">Cancelar</button>
-            <button type="submit" id="saveEdit">Salvar</button>
-          </div>
-        </form>
-      </div>
-    </dialog>
+    <label>Senha</label>
+    <input type="text" id="editSenha">
+
+    <label>Status</label>
+    <select id="editStatus">
+      <option>Ativo</option>
+      <option>Pendente</option>
+      <option>Inativo</option>
+    </select>
+
+    <div class="modal-actions">
+      <button onclick="modalEdit.close()">Cancelar</button>
+      <button>Salvar</button>
+    </div>
+
+  </div>
+</dialog>
 
 
     <!-- MODAL DELETE -->
     <dialog id="deleteDialog">
       <div class="modal-cardD">
-        <h3>Deseja deletar esta Matéria?</h3>
+        <h3>Deseja deletar este Adimn?</h3>
         <p id="deleteText"></p>
 
         <div class="modal-actions">
@@ -299,55 +321,81 @@
         </div>
       </div>
     </dialog>
+  </main>
 
-     <dialog id="modalAddClass" class="modal">
+  <!-- Modal Add -->
+   <dialog id="modalAdd">
+  <div class="modal-cardAdd">
 
-    <div class="modal-cardAdd">
-      <h2>Adicionar Matéria</h2>
+    <h3>Adicionar Usuário</h3>
 
-      <label>Nome da máteria</label>
-      <input type="text">
+    <label for="addNome">Nome</label>
+    <input type="text" id="addNome">
 
-      <label>Prazo</label>
-      <input type="date" id="editDeadline">
+    <label for="addDocumento">Documento</label>
+    <input type="text" id="addDocumento">
 
-      <div class="modal-actions">
-        <button id="closeModalAdd" class="btn-cancel">Cancelar</button>
-        <button class="btn-save">Salvar</button>
-      </div>
+    <label for="addEmail">Email</label>
+    <input type="email" id="addEmail">
+
+    <label for="addSenha">Senha</label>
+    <input type="text" id="addSenha">
+
+    <label for="addStatus">Status</label>
+    <select id="addStatus">
+      <option>Ativo</option>
+      <option>Pendente</option>
+      <option>Inativo</option>
+    </select>
+
+    <div class="modal-actions">
+      <button id="closeAdd">Cancelar</button>
+      <button>Salvar</button>
+    </div>
 
   </div>
-
 </dialog>
-  </main>
   
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener("DOMContentLoaded", () => {
 
-      const editDialog = document.getElementById("editDialog");
-      const deleteDialog = document.getElementById("deleteDialog");
+        
 
-      const closeEdit = document.getElementById("closeEdit");
-      const closeDelete = document.getElementById("closeDelete");
+    let currentRow = null;
 
-      const deleteText = document.getElementById("deleteText");
+    // BOTÃO EDITAR
+  const dialogEdit = document.querySelector("#modalEdit");
+  const dialogDelete = document.querySelector("#modalDelete");
 
-      let currentRow = null;
+  const btnsEdit = document.querySelectorAll(".btn-edit");
+  const btnsDelete = document.querySelectorAll(".btn-delete");
 
-      // BOTÃO EDITAR
-      document.querySelectorAll(".btn-edit").forEach(button => {
-        button.addEventListener("click", (e) => {
+// ========================
+// EDITAR
+// ========================
+  btnsEdit.forEach(btn => {
+  btn.addEventListener("click", function () {
 
-          const row = e.target.closest("tr");
-          currentRow = row;
+    const row = this.closest("tr"); // pega a linha
 
-          document.getElementById("editId").value = row.cells[0].innerText;
-          document.getElementById("editNome").value = row.cells[1].innerText;
-          document.getElementById("editDeadline").value = row.cells[2].innerText;
+    const id = row.children[0].textContent;
+    const nome = row.children[1].textContent;
+    const documento = row.children[2].textContent;
+    const email = row.children[3].textContent;
+    const senha = row.children[4].textContent;
+    const status = row.children[5].textContent;
 
-          editDialog.showModal();
-        });
-      });
+    // joga nos inputs do modal
+    document.getElementById("editId").value = id;
+    document.getElementById("editNome").value = nome;
+    document.getElementById("editDocumento").value = documento;
+    document.getElementById("editEmail").value = email;
+    document.getElementById("editSenha").value = senha;
+    document.getElementById("editStatus").value = status;
+
+    dialogEdit.showModal();
+  });
+});
 
       // BOTÃO DELETE
       document.querySelectorAll(".btn-delete").forEach(button => {
@@ -358,7 +406,7 @@
 
           const nome = row.cells[1].innerText;
 
-          deleteText.innerText = "Matéria: " + nome;
+          deleteText.innerText = "Adm: " + nome;
 
           deleteDialog.showModal();
         });
@@ -376,19 +424,19 @@
         deleteDialog.close();
       });
 
-      const modal = document.getElementById("modalAddClass");
-      const btnOpen = document.getElementById("btn-add");
-      const btnClose = document.getElementById("closeModalAdd");
-
-      btnOpen.addEventListener("click", () => {
-        modal.showModal();
-      });
-
-      btnClose.addEventListener("click", () => {
-        modal.close();
-      });
-
     });
+
+    const modalAdd = document.getElementById("modalAdd");
+  const btnAdd = document.getElementById("btn-add");
+  const closeAdd = document.getElementById("closeAdd");
+
+  btnAdd.addEventListener("click", () => {
+  modalAdd.showModal();
+  });
+
+  closeAdd.addEventListener("click", () => {
+  modalAdd.close();
+  });
   </script>
 </body>
 </html>

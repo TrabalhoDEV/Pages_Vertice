@@ -20,9 +20,9 @@
     font-size: var(--text-md);
 }
 
-.btn-add{
+#btn-add{
     font-size: var(--text-sm) ;
-    background: var(--primary-color);
+    background: #4c63ff;
     color: white;
     border: none;
     padding: 15px 35px;
@@ -33,7 +33,7 @@
 
 td button{
     font-size: var(--text-sm) ;
-    background: var(--primary-color);
+    background: #4c63ff;
     color: white;
     border: none;
     width: 110px;
@@ -79,6 +79,25 @@ td button{
     font-size: 15px;
     font-weight: 600;
 }
+
+.approved{
+    color:#10b981;
+    background:#e7f8f1;
+    border:1px solid #10b981;
+}
+
+.reproved{
+    color:#ff0066;
+    background:#ffe6ef;
+    border:1px solid #ff0066;
+}
+
+.pending{
+    color:#8b97b3;
+    background:#eef1f6;
+    border:1px solid #cfd6e6;
+}
+
 dialog {
     border: none;
     border-radius: 12px;
@@ -90,7 +109,7 @@ dialog {
 
 .modal-cardU {
   padding: 30px;
-  height: 270px;
+  height: 480px;
   width: 350px;
 }
 
@@ -98,6 +117,18 @@ dialog {
   padding: 30px;
   height: 170px;
   width: 350px;
+}
+.modal-cardAdd {
+  padding: 30px;
+  height: 470px;
+  width: 350px;
+}
+.modal-cardAdd input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: var(--medium-radius);
+    border: 1px solid rgb(201, 201, 201);
 }
 
 .modal-cardU input {
@@ -125,7 +156,7 @@ dialog {
 }
 .modal-actions button{
     font-size: var(--text-sm) ;
-    background: var(--primary-color);
+    background: #4c63ff;
     color: white;
     border: none;
     width: 110px;
@@ -134,25 +165,9 @@ dialog {
     cursor: pointer;
     margin-left: 20px;
 }
-.modal-cardAdd {
-  padding: 30px;
-  height: 250px;
-  width: 350px;
-}
-.modal-cardAdd input {
-    width: 90%;
-    padding: 8px;
+select{
     margin-bottom: 15px;
     border-radius: var(--medium-radius);
     border: 1px solid rgb(201, 201, 201);
-}
-#btn-add{
-    font-size: var(--text-sm) ;
-    background: #4c63ff;
-    color: white;
-    border: none;
-    padding: 15px 35px;
-    border-radius: 8px;
-    cursor: pointer;
- 
+
 }

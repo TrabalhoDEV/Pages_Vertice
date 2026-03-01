@@ -104,7 +104,7 @@ dialog {
 
 .modal-cardU {
   padding: 30px;
-  height: 480px;
+  height: 320px;
   width: 350px;
 }
 
@@ -147,4 +147,27 @@ dialog {
     border-radius: 8px;
     cursor: pointer;
     margin-left: 20px;
+}
+
+.modal-cardAdd {
+  padding: 30px;
+  height: 305px;
+  width: 350px;
+}
+.modal-cardAdd input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: var(--medium-radius);
+    border: 1px solid rgb(201, 201, 201);
+}
+#btn-add{
+    font-size: var(--text-sm) ;
+    background: #4c63ff;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 8px;
+    cursor: pointer;
+ 
 }
